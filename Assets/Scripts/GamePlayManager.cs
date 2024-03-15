@@ -10,7 +10,7 @@ public class GamePlayManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI timer;
     [SerializeField] Image loseBanner;
     [SerializeField] Image winBanner;
-    private float remainingTime = 10f;
+    private float remainingTime = 45f;
     private bool isRunningTime = true;
     private Board board;
 
@@ -73,6 +73,7 @@ public class GamePlayManager : MonoBehaviour
 
         board.ClearBoard();
         board.SetupLevel(board.level);
-
+        remainingTime = 45f;
+        isRunningTime = true;
     }
 }

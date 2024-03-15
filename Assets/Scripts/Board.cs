@@ -85,6 +85,12 @@ public class Board : MonoBehaviour
         }
 
         boxs.Clear();
+        foreach (var candy in candies)
+        {
+            Destroy(candy.gameObject);
+        }
+
+        candies.Clear();
     }
 
     private void Update()
